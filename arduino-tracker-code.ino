@@ -1,13 +1,29 @@
-#define MAX_RPMS             100.0
-#define SIDEREAL_RPMS       0.6949
+//Written in Arduino IDE 1.8.9
+
+/*
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF 
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS 
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN 
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN 
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+SOFTWARE.
+*/
+
+#define MAX_RPMS             100.0  //maximum speed, change as desired and allowable
+#define SIDEREAL_RPMS       0.6949  //with hinge-to-rod length 32cm 
 #define STEP_PIN                 9
 #define DIRECTION_PIN            8
 #define REVERSE_PIN             10
 #define SIDEREAL_PIN            11
 #define R_PIN                   12
 #define F_PIN                   13
-#define STEPS_PER_REV          200
-#define MICROSTEPS_PER_STEP      8
+#define STEPS_PER_REV          200  //steps per revolution depends on the stepper motor used
+#define MICROSTEPS_PER_STEP      8  //according to the driver/motor and user
+
+//nothing needs to be changed below this line
+
 #define MICROSECONDS_PER_MICROSTEPMAX  (1000000/(STEPS_PER_REV * MICROSTEPS_PER_STEP)/(MAX_RPMS / 60))
 #define MICROSECONDS_PER_MICROSTEP (1000000/(STEPS_PER_REV * MICROSTEPS_PER_STEP)/(SIDEREAL_RPMS/60))
 

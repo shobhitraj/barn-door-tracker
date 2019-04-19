@@ -4,7 +4,7 @@ Barndoor Tracker Readme
 This project contains an arduino program suitable for controlling an
 astrophotography barndoor mount.
 
-Mount specs:
+Mount specs:  
 Single arm isosceles mount  
 Hinge to rod length - 32cm  
 Threaded rod - M8 300mm (pitch 2mm)   
